@@ -1,0 +1,111 @@
+/* Patrones Globales */
+
+/* Eliminar margen por defecto del BODY */
+body { margin: 0; overflow-x: hidden; }
+
+/* Tipografía Única: Quicksand */
+h1, h2, h3, h4, h5, h6, p, a, span, form, input, select, textarea, option, button, div { font-family: 'Quicksand', sans-serif; }
+
+/* Propiedad display: block; a todas las cajas de estructura para que se comporten como cajas */
+header, main, section, footer, aside, article, figure, figcaption, nav, div { display: block; }
+
+/* Quitar margen que traen por defecto los títulos, subtítulos y párrafos */
+h1, h2, h3, h4, h5, h6, p, figure { margin: 0; }
+
+
+
+/* Estilo Propio */
+
+/* Caja Main */
+main { width: 100%; height: auto; margin: 0 auto; float: none; position: relative; }
+
+
+/* Componente Banner Collage Superior */
+main section#banner-collage-superior { width: 100%; height: auto; margin: 0 auto; float: none; position: relative; }
+
+main section#banner-collage-superior article { width: 100%; height: 1200px; margin: 0 auto; float: none; position: relative; background: #333; }
+main section#banner-collage-superior article figure { margin: 0; float: none; position: absolute; }
+
+main section#banner-collage-superior article figure#img-01 { width: 100%; height: 600px; top: 0; left: 0; background: #ff0; }
+main section#banner-collage-superior article figure#img-02 { width: 50%; height: 600px; bottom: 0; left: 0; background: #f0f; }
+main section#banner-collage-superior article figure#img-03 { width: 50%; height: 300px; bottom: 300px; right: 0; background: #09f; }
+main section#banner-collage-superior article figure#img-04 { width: 16.1%; height: 300px; bottom: 0; right: 34%; background: #f50; }
+main section#banner-collage-superior article figure#img-05 { width: 34%; height: 300px; bottom: 0; right: 0; background: #f00; }
+
+
+
+/* Video desde YouTube */
+main section#banner-youtube { width: 100%; height: auto; margin: 0 auto; float: none; position: relative; }
+main section#banner-youtube iframe { width: 100%; height: 100vh; margin: 0 auto; float: none; position: relative; }
+
+
+
+/* Video HTML5 desde MP4 */
+main section#banner-video-html5 { width: 100%; height: auto; margin: 0 auto; float: none; position: relative; }
+main section#banner-video-html5 video { width: 100%; height: 100vh; margin: 0 auto; float: none; position: relative; background: #000; }
+
+
+
+/* Video HTML5 de Fondo */
+main section#banner-video-html5-fondo { width: 100%; height: 100vh; margin: 0 auto; float: none; position: relative; overflow: hidden; }
+
+main section#banner-video-html5-fondo div#contenido-video { width: 100%; height: 100vh; margin: 0 auto; float: none; position: absolute; top: 0; left: 0; z-index: 3; }
+main section#banner-video-html5-fondo div#contenido-video h1 { font-size: 2em; line-height: 1em; text-align: center; color: #fff; letter-spacing: 0.15em; padding: 47vh 0; }
+
+main section#banner-video-html5-fondo div#capa-color-video { width: 100%; height: 100vh; margin: 0 auto; float: none; position: absolute; top: 0; left: 0; z-index: 2; background: rgba(61, 1, 61, 0.65); }
+
+main section#banner-video-html5-fondo video { width: 100%; height: 100vh; margin: 0 auto; float: none; position: absolute; top: 0; left: 0; z-index: 1; transform: scale(1.3); }
+
+
+
+
+/* Zona de Media Queries */
+
+/* Tablets */
+@media only screen and (max-width: 1199px){
+
+}
+
+@media only screen and (max-width: 999px){
+    /* Componente Banner Collage Superior */
+    main section#banner-collage-superior article { height: 500px; }
+    main section#banner-collage-superior article figure#img-01 { display: none; }
+    main section#banner-collage-superior article figure#img-02 { width: 50%; height: 50%; top: 0; }
+    main section#banner-collage-superior article figure#img-03 { width: 50%; height: 50%; bottom: 0; top: 0; }
+    main section#banner-collage-superior article figure#img-04 { width: 50%; height: 50%; bottom: 0; right: 0; left: 0; }
+    main section#banner-collage-superior article figure#img-05 { width: 50%; height: 50%; }
+
+
+    /* Video desde YouTube */
+    main section#banner-youtube iframe { height: 50vh; }
+
+
+    /* Video HTML5 desde MP4 */main section#banner-video-html5 video { height: 50vh; }
+}
+
+@media only screen and (max-width: 899px){
+    /* Video HTML5 de Fondo */
+    main section#banner-video-html5-fondo { height: 70vh; }
+    main section#banner-video-html5-fondo div#contenido-video { height: 70vh; }
+    main section#banner-video-html5-fondo div#contenido-video h1 { font-size: 1.7em; padding: 33vh 0; }
+    main section#banner-video-html5-fondo div#capa-color-video { height: 70vh; }
+    main section#banner-video-html5-fondo video { height: 70vh; }
+}
+
+@media only screen and (max-width: 699px){
+    /* Video HTML5 de Fondo */
+    main section#banner-video-html5-fondo div#contenido-video h1 { padding: 33vh 50px; }
+    main section#banner-video-html5-fondo video { transform: scale(1.7); }
+}
+
+/* Móviles Grandes */
+@media only screen and (max-width: 499px){
+    
+}
+
+/* Móviles Pequeños */
+@media only screen and (max-width: 399px){
+    /* Video HTML5 de Fondo */
+    main section#banner-video-html5-fondo div#contenido-video h1 { padding: 27vh 50px; }
+    main section#banner-video-html5-fondo video { transform: scale(2); }
+}
